@@ -1,1 +1,16 @@
-
+第五章讲了什么?
+1、for循环和if的结合使用.
+例子:
+cars=['audi','bmw','subaru','toyota']
+for car in cars:
+	if car=='bmw':
+		print("BMW")
+	else:
+		print(f"{car.title()}")
+2、if语句
+1)if语句格式:
+if condition(说明 condition为True,则执行下面👇的语句):
+    do command
+2)if语句检查
+I 是否相等(在python中检查是否相等时区分大小写) 用 ==
+II 
