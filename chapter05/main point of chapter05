@@ -7,10 +7,70 @@ for car in cars:
 		print("BMW")
 	else:
 		print(f"{car.title()}")
+		
 2、if语句
+
 1)if语句格式:
 if condition(说明 condition为True,则执行下面👇的语句):
     do command
 2)if语句检查
-I 是否相等(在python中检查是否相等时区分大小写) 用 ==
-II 
+ I 是否相等(在python中检查是否相等时区分大小写) 用 ==
+ II 检查是否不相等 用 !=
+ III 数值比较 == != <= >= < >
+ IV 检查多个条件,用 and(两边的条件都必须为True) 和 or(只要有一个条件为True即可)
+ V 检查特定值是否包含在列表中,用 in 
+ VI检查特定值是否不包含在列表中,用 not in
+
+3、if-else语句(条件测试通过时执行一个操作，在没有通过时执行另一个操作)
+
+4、if-elif-else结构(检查超过两个条件的情形，可使用Python提供的if-elif-else结构)
+ I、使用多个elif代码块(检查多个条件时,可看情况使用elif代码块
+ 
+5、测试多个条件(在可能有多个条件为True且需要在每个条件为True时都采取相应措施时，适合使用这种方法。)
+例子:
+requested_topping=['mushrooms','extra cheese','green pepper']
+if 'mushrooms' in requested_topping:
+	print("Adding mushrooms.")
+if 'extra cheese' in requested_topping:
+	print("Adding extra cheese")
+if 'green pepper' in requested_topping:
+	print("Adding green pepper")
+	
+6、使用if语句处理列表
+
+1)检查特殊元素
+例子(检查'green pepper'):
+requested_toppings=['mushrooms','extra cheese','green pepper']
+for requested_topping in requested_toppings:
+	if requested_topping=='green pepper':
+		print(f"Sorry,we are out of {requested_topping} right now")
+	else:
+		print(f"Adding {requested_topping}.")
+print("Finished making your pizza")
+
+2)确定列表不是空的
+例子:
+requested_toppings=[]
+if requested_toppings:
+	for requested_topping in requested_toppings:
+		print(f"Adding {requested_topping}.")
+		print("\n Finished making your pizza")
+else:
+	print("Are you sure want a plain pizza?")
+	
+3)使用多个列表
+例子:下面的示例定义了两个列表，其中第一个列表包含比萨店供应的配料，而第二个列表包含顾客点的配料。
+这次对于requested_toppings中的每个元素，都检查它是否是比萨店供应的配料，再决定是否在比萨中添加它：
+
+available_toppings=['mushrooms','olives','green pepper','pepperoni','pineapple','extra cheese']
+requested_toppings=['mushrooms','french fries','extra cheese']
+for requested_topping in requested_toppings:
+	if requested_topping in available_toppings:
+		print(f"Adding {requested_topping}\n")
+	else:
+		print(f"Sorry,we are out of {requested_topping}\n")
+print("Finished making your pizza")
+
+	
+	
+
